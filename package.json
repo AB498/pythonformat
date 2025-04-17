@@ -1,9 +1,9 @@
 {
-  "publisher": "498",
+  "publisher": "ab-498",
   "name": "pythonformat",
   "displayName": "Python Format + Lint: Formatter and Linter for Python Files",
   "description": "Lint and Format Python codes, a fast Python Ruff Formatter indent fixer prettier linter",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "icon": "imgs/icon.png",
   "repository": {
     "type": "git",

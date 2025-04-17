@@ -3,7 +3,7 @@
 ### Format `python` files with one keystroke `win+shift+f` (windows) or `cmd+shift+f` (macOS). Get issues `linted` on your editor.
 
 <div style="text-align:center;font-family: monospace; display: flex; align-items: center; justify-content: center; width: 100%; gap: 10px">
-        <a href="https://discord.gg/dquNGYwfnW"><img src="https://img.shields.io/discord/1095854826786668545" alt="Discord"></a>
+        <a href="https://discord.gg/ZeeqSBpjU2"><img src="https://img.shields.io/discord/1095854826786668545" alt="Discord"></a>
         <a href="https://img.shields.io/badge/License-MIT-yellow.svg"><img
                 src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 </div>
@@ -46,7 +46,7 @@ Nothing needed.
 ## For more information or help
 
 - [Email (abcd49800@gmail.com)](mailto:abcd49800@gmail.com)
-- [Discord (CodePlayground)](https://discord.gg/dquNGYwfnW)
+- [Discord (CodePlayground)](https://discord.gg/ZeeqSBpjU2)
 
 ---
 
