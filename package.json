@@ -1,0 +1,120 @@
+{
+  "publisher": "498-00",
+  "name": "pythonformat",
+  "displayName": "Python Format + Lint: Formatter and Linter for Python Files",
+  "description": "Lint and Format Python codes, a fast Python Ruff Formatter indent fixer prettier linter",
+  "version": "1.0.51",
+  "icon": "imgs/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AB498/pythonformat"
+  },
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "keywords": [
+    "format",
+    "formatters",
+    "python",
+    "lint",
+    "ruff",
+    "py",
+    "linter",
+    "formatter",
+    "prettier"
+  ],
+  "categories": [
+    "Formatters",
+    "Linters",
+    "Programming Languages",
+    "Debuggers",
+    "Visualization"
+  ],
+  "activationEvents": [
+    "onLanguage:python",
+    "workspaceContains:**/*.py",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": [
+      {
+        "type": "object",
+        "title": "PythonFormat: Enable/Disable Lint",
+        "properties": {
+          "pythonformat.lint": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to enable linter and how in-editor or not"
+          }
+        }
+      },
+      {
+        "type": "object",
+        "title": "PythonFormat: Format Arguments",
+        "properties": {
+          "pythonformat.formatargs": {
+            "type": "string",
+            "default": "",
+            "description": "Leave empty for default. Specify format arguments separated by spsace here, e.g., --line-width=88 --indent_style=space"
+          }
+        }
+      }
+    ],
+    "commands": [
+      {
+        "command": "pythonformat.enableLint",
+        "title": "PythonFormat: Enable PythonFormat Lint"
+      },
+      {
+        "command": "pythonformat.disableLint",
+        "title": "PythonFormat: Disable PythonFormat Lint"
+      }
+    ],
+    "languages": [
+      {
+        "id": "python",
+        "extensions": [
+          ".py",
+          ".python",
+          ".pyi",
+          ".pyw"
+        ],
+        "aliases": [
+          "python",
+          "py"
+        ]
+      }
+    ],
+    "formatters": [
+      {
+        "language": "python",
+        "selector": "source.python",
+        "id": "pythonformat-formatter",
+        "title": "Python Format + Lint: Formatter",
+        "default": true
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "vscode:prepublish": "npm run build",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.0.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild-plugin-copy": "^2.1.1",
+    "eslint": "^9.13.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@astral-sh/ruff-wasm-nodejs": "^0.7.4",
+    "axios": "^1.7.7"
+  }
+}
